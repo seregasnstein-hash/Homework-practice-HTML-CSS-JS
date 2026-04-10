@@ -1,0 +1,31 @@
+@use './variables' as v;
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+
+body {
+    margin: 0;
+    color: v.$text-color;
+    font-family: v.$font-main;
+    letter-spacing: 0.2px;
+    background-color: #fafafa;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}

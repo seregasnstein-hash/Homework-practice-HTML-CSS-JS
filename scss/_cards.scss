@@ -1,0 +1,33 @@
+@use './variables' as v;
+
+.card{
+    max-width: 330px;
+    min-height: 270px;
+    background-color: #FFFFFF;
+    margin-top: 80px;
+    padding: 35px 40px;
+    box-shadow: 0 13px 19px rgba(0, 0, 0, 0.2);
+    &__icon{
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background-color: v.$danger-color;
+        background-image: url(../image/hat.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__title{
+        font-weight: v.$fw-bold;
+        font-size: 24px;
+        line-height: 3.2;
+    }
+    &__text{
+        line-height: 2;
+    }
+}
+.icon--training{
+    background-image: url('../image/backpack.png');
+}
+.icon--book{
+    background-image: url('../image/book.png');
+}

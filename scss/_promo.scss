@@ -1,0 +1,34 @@
+@use "./variables" as v;
+
+.promo{
+    width: 100%;
+    min-height: 700px;
+    background-image: url(../image/schoolgirl.png);
+    background-position: -55px -65px;
+    background-repeat: no-repeat;
+    &__block{
+        max-width: 600px;
+        padding: 0 10px;
+    }
+    &__title{
+        font-weight: v.$fw-bold;
+        font-size: 58px;
+        line-height: 80px;
+        padding-top: 90px;
+    }
+    &__text{
+        font-size: 20px;
+        line-height: 30px;
+        padding-top: 40px;
+    }
+    &__button{
+        padding-top: 50px;
+    }
+    &__cards{
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 80px;
+        gap: 30px;
+    }
+}

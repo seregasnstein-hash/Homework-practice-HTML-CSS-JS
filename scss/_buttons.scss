@@ -1,0 +1,18 @@
+@use "./variables" as v;
+
+.button {
+  all: unset;
+  padding: 15px 25px;
+  color: v.$primary-color;
+  font-weight: v.$fw-bold;
+  border-radius: 5px;
+  border: 1px solid v.$primary-color;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+  &--primary {
+    color: #ffffff;
+    background-color: v.$primary-color;
+  }
+}

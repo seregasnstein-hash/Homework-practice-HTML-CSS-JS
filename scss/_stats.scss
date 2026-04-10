@@ -1,0 +1,22 @@
+@use "./variables" as v;
+
+.stats {
+  width: 100%;
+  min-height: 265px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 0 80px 0 10px;
+  &__quantity {
+    font-weight: v.$fw-bold;
+    color: v.$primary-color;
+    font-size: 58px;
+    line-height: 80px;
+  }
+  &__title{
+    font-weight: v.$fw-bold;
+    font-size: 16px;
+    letter-spacing: 0.1;
+  }
+}
