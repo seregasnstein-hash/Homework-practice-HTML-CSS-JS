@@ -1,5 +1,5 @@
 @mixin lg {
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1105px) {
     @content;
   }
 }
@@ -11,7 +11,7 @@
 }
 
 @mixin sm {
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 400px) {
     @content;
   }
 }

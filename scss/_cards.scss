@@ -1,4 +1,5 @@
 @use './variables' as v;
+@use './mixins' as *;
 
 .card{
     max-width: 330px;
@@ -7,6 +8,11 @@
     margin-top: 80px;
     padding: 35px 40px;
     box-shadow: 0 13px 19px rgba(0, 0, 0, 0.2);
+    @include sm{
+        margin-top: 40px;
+        max-width: 280px;
+        min-height: 210px;
+    }
     &__icon{
         width: 72px;
         height: 72px;
@@ -15,14 +21,24 @@
         background-image: url(../image/hat.png);
         background-position: center;
         background-repeat: no-repeat;
+        @include sm {
+            width: 52px;
+            height: 52px;
+        }
     }
     &__title{
         font-weight: v.$fw-bold;
         font-size: 24px;
         line-height: 3.2;
+        @include sm {
+            font-size: 16px;
+        }
     }
     &__text{
         line-height: 2;
+        @include sm {
+            font-size: 12px;
+        }
     }
 }
 .icon--training{

@@ -1,4 +1,5 @@
 @use "./variables" as v;
+@use "./mixins" as *;
 
 .stats {
   width: 100%;
@@ -8,15 +9,31 @@
   align-items: center;
   text-align: center;
   padding: 0 80px 0 10px;
+  @include lg {
+    padding: 0px;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  @include sm {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
   &__quantity {
     font-weight: v.$fw-bold;
     color: v.$primary-color;
     font-size: 58px;
     line-height: 80px;
+    @include md {
+      font-size: 32px;
+    }
   }
   &__title{
     font-weight: v.$fw-bold;
     font-size: 16px;
     letter-spacing: 0.1;
+    @include md {
+      font-size: 12px;
+    }
   }
 }

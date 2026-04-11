@@ -1,4 +1,5 @@
 @use "./variables" as v;
+@use "./mixins" as *;
 
 .promo{
     width: 100%;
@@ -6,29 +7,62 @@
     background-image: url(../image/schoolgirl.png);
     background-position: -55px -65px;
     background-repeat: no-repeat;
+    @include md {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: none;
+    }
     &__block{
         max-width: 600px;
         padding: 0 10px;
+        @include md {
+            text-align: center;
+        }
     }
     &__title{
         font-weight: v.$fw-bold;
         font-size: 58px;
         line-height: 80px;
         padding-top: 90px;
+        @include md {
+            text-align: center;
+        }
+        @include sm {
+            font-size: 32px;
+            line-height: 40px;
+            padding-top: 30px;
+        }
     }
     &__text{
         font-size: 20px;
         line-height: 30px;
         padding-top: 40px;
+        @include sm {
+            font-size: 16px;
+            padding-top: 20px;
+            line-height: 20px;
+        }
     }
     &__button{
         padding-top: 50px;
+        @include sm{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
     }
     &__cards{
         padding: 0 10px;
         display: flex;
         justify-content: space-between;
         padding-right: 80px;
-        gap: 30px;
+        @include lg {
+            padding-right: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
     }
 }

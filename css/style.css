@@ -40,15 +40,15 @@ table {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  src: url("../fonts/Montserrat-Regular.woff2") format("truetype");
   font-weight: 400;
-  font-style: normal;
+  font-style: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url(../fonts/Montserrat-Bold.ttf) format("truetype");
+  src: url(../fonts/Montserrat-Bold.woff2) format("truetype");
   font-weight: 700;
-  font-style: normal;
+  font-style: swap;
 }
 html {
   box-sizing: border-box;
@@ -104,9 +104,25 @@ a {
   font-size: 14px;
   padding: 0 10px;
 }
+@media screen and (max-width: 1105px) {
+  .header {
+    padding: 0px 10px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .header__logo {
   font-weight: 700;
   font-size: 24px;
+}
+@media screen and (max-width: 800px) {
+  .header__logo {
+    padding: 20px 0;
+  }
 }
 .header__menu {
   width: 100%;
@@ -115,11 +131,28 @@ a {
   align-items: center;
   padding-right: 80px;
 }
+@media screen and (max-width: 1105px) {
+  .header__menu {
+    padding-right: 0px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header__menu {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .header__list {
   display: flex;
   gap: 20px;
   font-weight: 700;
   color: #737373;
+}
+@media screen and (max-width: 400px) {
+  .header__list {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .header__link:hover {
   color: rgb(255, 0, 128);
@@ -132,9 +165,22 @@ a {
   background-position: -55px -65px;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 800px) {
+  .promo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: none;
+  }
+}
 .promo__block {
   max-width: 600px;
   padding: 0 10px;
+}
+@media screen and (max-width: 800px) {
+  .promo__block {
+    text-align: center;
+  }
 }
 .promo__title {
   font-weight: 700;
@@ -142,20 +188,54 @@ a {
   line-height: 80px;
   padding-top: 90px;
 }
+@media screen and (max-width: 800px) {
+  .promo__title {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .promo__title {
+    font-size: 32px;
+    line-height: 40px;
+    padding-top: 30px;
+  }
+}
 .promo__text {
   font-size: 20px;
   line-height: 30px;
   padding-top: 40px;
 }
+@media screen and (max-width: 400px) {
+  .promo__text {
+    font-size: 16px;
+    padding-top: 20px;
+    line-height: 20px;
+  }
+}
 .promo__button {
   padding-top: 50px;
+}
+@media screen and (max-width: 400px) {
+  .promo__button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
 }
 .promo__cards {
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
   padding-right: 80px;
-  gap: 30px;
+}
+@media screen and (max-width: 1105px) {
+  .promo__cards {
+    padding-right: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
 }
 
 .card {
@@ -166,6 +246,13 @@ a {
   padding: 35px 40px;
   box-shadow: 0 13px 19px rgba(0, 0, 0, 0.2);
 }
+@media screen and (max-width: 400px) {
+  .card {
+    margin-top: 40px;
+    max-width: 280px;
+    min-height: 210px;
+  }
+}
 .card__icon {
   width: 72px;
   height: 72px;
@@ -175,13 +262,29 @@ a {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 400px) {
+  .card__icon {
+    width: 52px;
+    height: 52px;
+  }
+}
 .card__title {
   font-weight: 700;
   font-size: 24px;
   line-height: 3.2;
 }
+@media screen and (max-width: 400px) {
+  .card__title {
+    font-size: 16px;
+  }
+}
 .card__text {
   line-height: 2;
+}
+@media screen and (max-width: 400px) {
+  .card__text {
+    font-size: 12px;
+  }
 }
 
 .icon--training {
@@ -201,14 +304,37 @@ a {
   text-align: center;
   padding: 0 80px 0 10px;
 }
+@media screen and (max-width: 1105px) {
+  .stats {
+    padding: 0px;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 400px) {
+  .stats {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+}
 .stats__quantity {
   font-weight: 700;
   color: #96BB7C;
   font-size: 58px;
   line-height: 80px;
 }
+@media screen and (max-width: 800px) {
+  .stats__quantity {
+    font-size: 32px;
+  }
+}
 .stats__title {
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 0.1;
+}
+@media screen and (max-width: 800px) {
+  .stats__title {
+    font-size: 12px;
+  }
 }
